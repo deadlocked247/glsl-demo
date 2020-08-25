@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/glsl-demo/static/css/main.66d00a6b.chunk.css",
+    "main.js": "/glsl-demo/static/js/main.f893c050.chunk.js",
+    "main.js.map": "/glsl-demo/static/js/main.f893c050.chunk.js.map",
+    "runtime-main.js": "/glsl-demo/static/js/runtime-main.625e45cd.js",
+    "runtime-main.js.map": "/glsl-demo/static/js/runtime-main.625e45cd.js.map",
+    "static/js/2.eb385bb6.chunk.js": "/glsl-demo/static/js/2.eb385bb6.chunk.js",
+    "static/js/2.eb385bb6.chunk.js.map": "/glsl-demo/static/js/2.eb385bb6.chunk.js.map",
+    "static/js/3.8588dbe1.chunk.js": "/glsl-demo/static/js/3.8588dbe1.chunk.js",
+    "static/js/3.8588dbe1.chunk.js.map": "/glsl-demo/static/js/3.8588dbe1.chunk.js.map",
+    "index.html": "/glsl-demo/index.html",
+    "precache-manifest.066a55e5e09d35997447b133999c113b.js": "/glsl-demo/precache-manifest.066a55e5e09d35997447b133999c113b.js",
+    "service-worker.js": "/glsl-demo/service-worker.js",
+    "static/css/main.66d00a6b.chunk.css.map": "/glsl-demo/static/css/main.66d00a6b.chunk.css.map",
+    "static/js/2.eb385bb6.chunk.js.LICENSE.txt": "/glsl-demo/static/js/2.eb385bb6.chunk.js.LICENSE.txt",
+    "static/media/cross.jpg": "/glsl-demo/static/media/cross.00397b42.jpg",
+    "static/media/ping.mp3": "/glsl-demo/static/media/ping.e49c4b6b.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.625e45cd.js",
+    "static/js/2.eb385bb6.chunk.js",
+    "static/css/main.66d00a6b.chunk.css",
+    "static/js/main.f893c050.chunk.js"
+  ]
+}
