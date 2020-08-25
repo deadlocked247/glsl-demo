@@ -209,8 +209,6 @@ export default function () {
           }}
           gravity={[0, -40, 0]}
           allowSleep={false}>
-            {/* <Post /> */}
-
           <Suspense fallback={null}>
             <Scene welcome={welcome} />
           </Suspense>
