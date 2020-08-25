@@ -147,10 +147,6 @@ function ContactGround() {
   return <mesh ref={ref} />;
 }
 
-function Scene({ welcome }) {
-  return <></>;
-}
-
 export default function () {
   const welcome = useStore((state) => state.welcome);
   const { reset } = useStore((state) => state.api);
