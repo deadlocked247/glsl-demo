@@ -25,9 +25,9 @@ export default function Post() {
     <Suspense fallback={null}>
       <EffectComposer>
         <Vignette />
-        {/* <SSAO
+        <SSAO
           blendFunction={BlendFunction.MULTIPLY} // blend mode
-          samples={30} // amount of samples per pixel (shouldn't be a multiple of the ring count)
+          samples={8} // amount of samples per pixel (shouldn't be a multiple of the ring count)
           rings={4} // amount of rings in the occlusion sampling pattern
           distanceThreshold={1.0} // global distance threshold at which the occlusion effect starts to fade out. min: 0, max: 1
           distanceFalloff={0.0} // distance falloff. min: 0, max: 1
@@ -37,7 +37,7 @@ export default function Post() {
           radius={20} // occlusion sampling radius
           scale={0.5} // scale of the ambient occlusion
           bias={0.5} // occlusion bias
-        /> */}
+        />
         {/* <GodRays
           sun={sunRef}
           blendFunction={BlendFunction.Screen} // The blend function of this effect.
@@ -60,7 +60,7 @@ export default function Post() {
           active // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
           ratio={0.9} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
         /> */}
-        {/* <SMAA edgeDetection={0.1} /> */}
+        <SMAA edgeDetection={0.1} />
         <Noise opacity={0.15} premultiply blendFunction={BlendFunction.ADD} />
         {/* <Pixelation granularity={5} /> */}
       </EffectComposer>

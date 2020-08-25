@@ -14,7 +14,7 @@ const [useStore] = create((set) => ({
       if (velocity > 4) set((state) => ({ count: state.count + 1 }));
     },
     reset: (welcome) => set((state) => {
-        localStorage.setItem('highscore', state.count)
+        localStorage.setItem('highscore', Math.max(parseInt(localStorage.getItem('highscore')), state.count))
         return ({ welcome, count: welcome ? state.count : 0 });
     })
   },

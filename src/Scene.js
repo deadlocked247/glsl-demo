@@ -6,7 +6,7 @@ import lerp from "lerp";
 import useStore from "./Store";
 import { Text } from "drei";
 
-const Controls = () => {
+const Controls = ({ welcome }) => {
   let values = useRef([0, 0, 0]);
 
   const onMove = (e) => {
@@ -17,7 +17,9 @@ const Controls = () => {
     document.addEventListener("mousemove", onMove);
   });
   useFrame(({ camera }) => {
+    if (values.current[0])
     camera.position.x = lerp(camera.position.x, values.current[0], 0.1);
+    if (values.current[1])
     camera.position.y = lerp(camera.position.y, values.current[1], 0.1);
   }, 1);
 
@@ -78,7 +80,7 @@ export default function (props) {
         antialias: true,
       }}
     >
-      {welcome&& <Controls />}
+      {welcome&& <Controls welcome={welcome} />}
 
       {props.children}
     </Canvas>
