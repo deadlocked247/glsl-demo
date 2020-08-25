@@ -61,7 +61,7 @@ export default function Post() {
           ratio={0.9} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
         /> */}
         {/* <SMAA edgeDetection={0.1} /> */}
-        <Noise opacity={0.25} premultiply blendFunction={BlendFunction.ADD} />
+        <Noise opacity={0.15} premultiply blendFunction={BlendFunction.ADD} />
         {/* <Pixelation granularity={5} /> */}
       </EffectComposer>
     </Suspense>

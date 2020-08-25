@@ -7,7 +7,7 @@ import React, { Suspense, useRef } from "react";
 import crossTexture from "./cross.jpg";
 import PaddleModel from "./PaddleModel";
 import Post from "./Post";
-import Scene from './Scene';
+import Scene from "./Scene";
 import useStore from "./Store";
 
 function Paddle() {
@@ -62,6 +62,15 @@ function Ball() {
   );
 }
 
+function Background() {
+  return (
+    <mesh castShadow receiveShadow position={[0, 0, -10]}>
+      <planeBufferGeometry attach="geometry" args={[1000, 1000]} />
+      <meshBasicMaterial color="#C4F2CA" />
+    </mesh>
+  );
+}
+
 function ContactGround() {
   // When the ground was hit we reset the game ...
   const { reset } = useStore((state) => state.api);
@@ -79,7 +88,6 @@ export default function () {
   return (
     <Scene>
       <Post />
-      <color attach="background" args={["#FFEEE4"]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[-10, -10, -10]} />
       <spotLight
@@ -107,10 +115,7 @@ export default function () {
         gravity={[0, -40, 0]}
         allowSleep={false}
       >
-        <mesh castShadow receiveShadow position={[0, 0, -10]}>
-          <planeBufferGeometry attach="geometry" args={[1000, 1000]} />
-          <meshBasicMaterial color="#E8FFEB" />
-        </mesh>
+        <Background />
         <ContactGround />
         {!welcome && <Ball />}
         <Suspense fallback={null}>
