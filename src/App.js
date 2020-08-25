@@ -89,7 +89,6 @@ function Paddle() {
     materials.upper.clearcoat = 1;
     materials.upper.clearcoatRoughness = 0;
 
-
     materials.glove.clearcoat = 1;
     materials.glove.clearcoatRoughness = 0;
   }
@@ -149,20 +148,7 @@ function ContactGround() {
 }
 
 function Scene({ welcome }) {
-
-  return (
-    <>
-      <mesh castShadow receiveShadow position={[0, 0, -10]} >
-        <planeBufferGeometry attach="geometry" args={[1000, 1000]} />
-        <meshBasicMaterial color="#FFCAB4"/>
-      </mesh>
-      <ContactGround />
-      {!welcome && <Ball />}
-      <Suspense fallback={null}>
-        <Paddle />
-      </Suspense>
-    </>
-  );
+  return <></>;
 }
 
 export default function () {
@@ -173,17 +159,15 @@ export default function () {
   return (
     <>
       <Canvas
-      sRGB
+        sRGB
         camera={{ position: [0, 5, 12], fov: 50 }}
         onClick={onClick}
         concurrent
         shadowMap
-        
         gl={{ alpha: false, antialias: true }}>
         >
-
-      <color attach="background" args={["#FFEEE4"]} />
-      <ambientLight intensity={0.5} />
+        <color attach="background" args={['#FFEEE4']} />
+        <ambientLight intensity={0.5} />
         <pointLight position={[-10, -10, -10]} />
         <spotLight
           position={[10, 10, 10]}
@@ -195,7 +179,7 @@ export default function () {
           shadow-mapSize-height={2048}
           shadow-bias={-0.0001}
         />
-      <directionalLight position={[-10, -10, -5]} intensity={0.5} />
+        <directionalLight position={[-10, -10, -5]} intensity={0.5} />
         <Physics
           iterations={20}
           tolerance={0.0001}
@@ -209,8 +193,14 @@ export default function () {
           }}
           gravity={[0, -40, 0]}
           allowSleep={false}>
+          <mesh castShadow receiveShadow position={[0, 0, -10]}>
+            <planeBufferGeometry attach="geometry" args={[1000, 1000]} />
+            <meshBasicMaterial color="#FFCAB4" />
+          </mesh>
+          <ContactGround />
+          {!welcome && <Ball />}
           <Suspense fallback={null}>
-            <Scene welcome={welcome} />
+            <Paddle />
           </Suspense>
         </Physics>
       </Canvas>
