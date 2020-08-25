@@ -6,7 +6,7 @@ import lerp from "lerp";
 import useStore from "./Store";
 import { Text } from "drei";
 
-const Controls = () => {
+const Menu = () => {
   let values = useRef([0, 0, 0]);
 
   const onMove = (e) => {
@@ -78,7 +78,7 @@ export default function (props) {
         antialias: true,
       }}
     >
-      {welcome&& <Controls />}
+      {welcome&& <Menu />}
 
       {props.children}
     </Canvas>
