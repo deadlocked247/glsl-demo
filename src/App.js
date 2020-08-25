@@ -55,7 +55,7 @@ const [useStore] = create((set) => ({
 // The paddle was made in blender and auto-converted to JSX by https://github.com/react-spring/gltfjsx
 function Paddle() {
   // Load the gltf file
-  const { nodes, materials } = useLoader(GLTFLoader, '/pingpong.glb');
+  const { nodes, materials } = useLoader(GLTFLoader, process.env.PUBLIC_URL + '/pingpong.glb');
   // Fetch some reactive state
   const { pong } = useStore((state) => state.api);
   const welcome = useStore((state) => state.welcome);
