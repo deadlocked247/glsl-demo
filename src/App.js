@@ -79,7 +79,6 @@ function Paddle() {
     model.current.rotation.x = lerp(model.current.rotation.x, welcome ? Math.PI / 2 : 0, 0.2);
     model.current.rotation.y = values.current[0];
   });
-  console.log(materials)
   if (materials) {
     materials.wood.clearcoat = 1;
     materials.wood.clearcoatRoughness = 0;
